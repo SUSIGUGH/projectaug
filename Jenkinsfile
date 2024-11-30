@@ -15,10 +15,10 @@ pipeline{
         }
         stage('Create Container'){
             steps{
+		sh 'scripts/chkcontainers.sh'
+                sh 'sleep 30'
                 sh 'sudo docker run -d --name=redis01 custredis'
                 sh 'sudo docker ps'
-                sh 'sudo docker stop redis01'
-                sh 'sudo docker rm redis01'
             }
         }
         // stage('Run Docker Container'){
