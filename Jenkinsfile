@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Create Container'){
             steps{
-		sh 'scripts/chkcontainers.sh'
+		sh 'scripts/chkcontainer.sh'
                 sh 'sleep 30'
                 sh 'sudo docker run -d --name=redis01 custredis'
                 sh 'sudo docker ps'
