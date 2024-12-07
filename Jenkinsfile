@@ -12,7 +12,7 @@ pipeline{
             steps{
                 sh 'pwd'
                 sh 'scp -r projectaug ec2-user@34.219.82.161:~/'
-                sh 'ssh ec2-user@34.219.82.161 "cd ~/projectaug/ && docker-compose --build up -d"'
+                sh 'ssh ec2-user@34.219.82.161 "cd ~/projectaug/ && sudo docker-compose up --build -d && sudo docker-compose ps"'
             }
         }
         // stage('Run Docker Container'){
