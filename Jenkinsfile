@@ -8,17 +8,9 @@ pipeline{
                 sh 'ls -ltr'
             }
         }
-        stage('Build Docker Image'){
+        stage('SCP the Dockerfiles'){
             steps{
-                sh 'cd projectaug/redis && sudo docker build -t custredis .'
-            }
-        }
-        stage('Create Container'){
-            steps{
-		sh 'sh scripts/chkcontainer.sh'
-                sh 'sleep 30'
-                sh 'sudo docker run -d --name=redis01 custredis'
-                sh 'sudo docker ps'
+                sh 'scp -r projectaug ec2-user@34.219.82.161~/'
             }
         }
         // stage('Run Docker Container'){

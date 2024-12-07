@@ -1,0 +1,15 @@
+services:
+  postgresql:
+    build: ./postgresql
+  redis:
+    build: ./redis
+
+  airflow:
+    build: ./airflow
+    ports:
+      - '8080:8080'
+  scheduler:
+    build: ./scheduler
+
+  worker:
+    build: ./worker

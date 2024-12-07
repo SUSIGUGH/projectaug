@@ -1,0 +1,6 @@
+FROM bitnami/airflow-scheduler:latest 
+MAINTAINER sukarmagurung20@gmail.com 
+ENV AIRFLOW_DATABASE_USERNAME=bn_airflow
+ENV AIRFLOW_DATABASE_PASSWORD=bitnami1
+ENV AIRFLOW_DATABASE_NAME=bitnami_airflow
+ENV AIRFLOW_EXECUTOR=CeleryExecutor

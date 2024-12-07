@@ -1,4 +1,3 @@
-FROM bitnami/redis
-MAINTAINER susigugh@gmail.com
-ENV ALLOW_EMPTY_PASSWORD=yes
-
+FROM bitnami/redis:latest
+MAINTAINER sukarmagurung20@gmail.com
+ENV REDIS_PASSWORD=bitnami1

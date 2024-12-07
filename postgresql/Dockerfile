@@ -1,0 +1,5 @@
+FROM bitnami/postgresql:latest
+MAINTAINER sukarmagurung20@gmail.com
+ENV POSTGRESQL_USERNAME=bn_airflow
+ENV POSTGRESQL_PASSWORD=bitnami1
+ENV POSTGRESQL_DATABASE=bitnami_airflow
