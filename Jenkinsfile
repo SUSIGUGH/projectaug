@@ -10,7 +10,8 @@ pipeline{
         }
         stage('SCP the Dockerfiles'){
             steps{
-                sh 'scp -r projectaug ec2-user@34.219.82.161~/'
+                sh 'pwd'
+                sh 'scp -r projectaug ec2-user@34.219.82.161:~/'
             }
         }
         // stage('Run Docker Container'){
